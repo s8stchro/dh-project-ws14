@@ -10,7 +10,7 @@
 - only meaning in combination with other words or phrases
 - seperate part of speech
 - position in text is relevant, before a noun and after an adjective for example
-- typically words that encode grammatical categories, such as negation, mood, tense, or case
+- typically words that encode grammatical categories, such as negation (, mood, tense, or case not in greek!)
 
 ## tasks
 
