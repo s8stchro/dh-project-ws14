@@ -4,11 +4,11 @@ SOKRATES: Mein lieber Phaidros, wohin **denn** und woher?
 
 PHAIDROS: Von Lysias, o Sokrates, dem Sohne des Kephalos. **Und** **nun** `Kombination von Partikeln` gehe ich spazieren vor die Stadtmauer hinaus. **Denn** ich habe vom frühen Morgen an die ganze Zeit dort sitzend zugebracht. Dabei folge ich deinem und meinem Freund Akumenos und mache meine Spaziergänge auf der Straße, **denn**, versichert er, diese seien gesünder [B] als in den bedeckten Hallen.
 
-SOKRATES: Und mit Recht sagt er das, mein Freund! Also war Lysias, wie es scheint, in der Stadt?
+SOKRATES: **Und** mit Recht sagt er das, mein Freund! **Also** war Lysias, wie es scheint, in der Stadt?
 
 PHAIDROS: Ja, beim Epikrates, dort im Morychischen Hause, neben dem Olympion.
 
-SOKRATES: Was war denn nun da der Zeitvertreib? Oder, versteht sich, Lysias hat euch von seinen Reden aufgetischt?
+SOKRATES: Was war **denn** nun da der Zeitvertreib? Oder, versteht sich, Lysias hat euch von seinen Reden aufgetischt?
 
 PHAIDROS: Du sollst's erfahren, wenn du so weit Muße hast, weiter zu gehen und zu hören.
 
