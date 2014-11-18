@@ -17,8 +17,9 @@
 1. authorship attribution from stylistic analysis based on particle distribution
 	- frequency
 	- position in text
-	- relative position to other words
-	- relative position to the beginning of the sentence
+		- relative position to other words
+			- one word before and one word after 
+		- relative position to the beginning of the sentence
 2. 5 (or 6) semantical categories of particles
 	- make it possible to search for particles that are in a specific semantical category
 3. maybe: development of particle usage over time and in different genres
