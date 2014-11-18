@@ -6,6 +6,8 @@ PHAIDROS: Von Lysias, o Sokrates, dem Sohne des Kephalos. **Und** **nun** `Kombi
 
 SOKRATES: **Und** mit Recht sagt er das, mein Freund! **Also** war Lysias, wie es scheint, in der Stadt?
 
+---
+
 PHAIDROS: Ja, beim Epikrates, dort im Morychischen Hause, neben dem Olympion.
 
 SOKRATES: Was war **denn** nun da der Zeitvertreib? Oder, versteht sich, Lysias hat euch von seinen Reden aufgetischt?
