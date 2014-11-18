@@ -15,6 +15,10 @@
 ## tasks
 
 - authorship attribution from stylistic analysis based on particle distribution
+	- frequency
+	- position in text
+	- relative position to other words
+	- relative position to the beginning of the sentence
 - 5 (or 6) semantical categories of particles
 	- make it possible to search for particles that are in a specific semantical category
 - maybe: development of particle usage over time and in different genres
