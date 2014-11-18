@@ -25,7 +25,8 @@
 
 ## todo
 
-- will be filled later 😊
+- understanding the meaning of the abbreviations of the part of speech
+- getting list of particles and their variations
 
 ## instructions
 
