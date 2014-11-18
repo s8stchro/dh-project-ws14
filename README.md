@@ -26,7 +26,10 @@
 ## todo
 
 - understanding the meaning of abbreviations from the part of speech
-- getting list of particles and their variations
+- getting the list of particles and their variations
+	- accent
+	- combinations with other particles
+	- combinations with other words
 
 ## instructions
 
