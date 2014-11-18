@@ -23,6 +23,10 @@
 	- make it possible to search for particles that are in a specific semantical category
 3. maybe: development of particle usage over time and in different genres
 
+## todo
+
+- will be filled later 😊
+
 ## instructions
 
 - run tests with `py.test`, make sure that you have installed all the dependencies with `pip install -r /path/to/requirements.txt`
