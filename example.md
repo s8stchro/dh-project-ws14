@@ -2,7 +2,7 @@
 
 SOKRATES: Mein lieber Phaidros, wohin **denn** und woher?
 
-PHAIDROS: Von Lysias, o Sokrates, dem Sohne des Kephalos. **Und** **nun** `Kombination von Partikeln` gehe ich spazieren vor die Stadtmauer hinaus. **Denn** ich habe vom frühen Morgen an die ganze Zeit dort sitzend zugebracht. Dabei folge ich deinem und meinem Freund Akumenos und mache meine Spaziergänge auf der Straße, denn, versichert er, diese seien gesünder [B] als in den bedeckten Hallen.
+PHAIDROS: Von Lysias, o Sokrates, dem Sohne des Kephalos. **Und** **nun** `Kombination von Partikeln` gehe ich spazieren vor die Stadtmauer hinaus. **Denn** ich habe vom frühen Morgen an die ganze Zeit dort sitzend zugebracht. Dabei folge ich deinem und meinem Freund Akumenos und mache meine Spaziergänge auf der Straße, **denn**, versichert er, diese seien gesünder [B] als in den bedeckten Hallen.
 
 SOKRATES: Und mit Recht sagt er das, mein Freund! Also war Lysias, wie es scheint, in der Stadt?
 
