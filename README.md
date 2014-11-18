@@ -19,7 +19,7 @@
     - position in text
         - relative position to other words
             - one word before and one word after
-        - relative position to the beginning of the sentence, or subsentenct ','
+        - relative position to the beginning of the sentence, or subsentence `,`
 2. 5 (or 6) semantical categories of particles
     - make it possible to search for particles that are in a specific semantical category
 3. maybe: development of particle usage over time and in different genres
