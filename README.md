@@ -12,6 +12,12 @@
 - position in text is relevant, before a noun and after an adjective for example
 - typically words that encode grammatical categories, such as negation, mood, tense, or case
 
+## tasks
+
+- authorship attribution from stylistic analysis based on particle distribution
+- 5 or 6 semantical categories of particles
+	- make it possible to search for particles that are in a specific semantical category
+
 ## instructions
 
 - run tests with `py.test`, make sure that you have installed all the dependencies with `pip install -r /path/to/requirements.txt`
