@@ -15,7 +15,7 @@
 ## tasks
 
 - sentences are everything between `.!?` (note that in greek the punctuation is different)
-- `,` commas will be ignored
+- `,` commas will be ignored (temporarily)
 
 1. authorship attribution from stylistic analysis based on particle distribution
     - frequency
