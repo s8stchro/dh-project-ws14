@@ -14,6 +14,9 @@
 
 ## tasks
 
+- sentences are everything between `.!?`
+- `,` commas will be ignored
+
 1. authorship attribution from stylistic analysis based on particle distribution
     - frequency
     - position in text
