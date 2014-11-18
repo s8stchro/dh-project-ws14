@@ -3,6 +3,15 @@
 - requires `python3` and `pip`
 - [@github](https://github.com/KLINGTdotNET/dh-project-ws14) [private]
 
+## particle
+
+- on [wikipedia](http://www.wikiwand.com/en/Grammatical_particle)
+- function word
+- only meaning in combination with other words other phrases
+- seperate part of speech
+- position in text is relevant, before a noun and after an adjective for example
+- typically words that encode grammitacal categories, such as negation, mood, tense, or case
+
 ## instructions
 
 - run tests with `py.test`, make sure that you have installed all the dependencies with `pip install -r /path/to/requirements.txt`
