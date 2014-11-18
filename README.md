@@ -25,7 +25,7 @@
 
 ## todo
 
-- understanding the meaning of the abbreviations of the part of speech
+- understanding the meaning of abbreviations from the part of speech
 - getting list of particles and their variations
 
 ## instructions
