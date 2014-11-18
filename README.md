@@ -15,9 +15,9 @@
 ## tasks
 
 - authorship attribution from stylistic analysis based on particle distribution
-- 5 or 6 semantical categories of particles
+- 5 (or 6) semantical categories of particles
 	- make it possible to search for particles that are in a specific semantical category
-- maybe: development of particle usage over time
+- maybe: development of particle usage over time and in different genres
 
 ## instructions
 
