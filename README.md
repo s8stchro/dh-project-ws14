@@ -1,7 +1,15 @@
-# project for the digital humanities course at university of leipzig in ws 2014
+# Authorship Attribution from Stylistic Analysis Based on Particle Distribution
+- project for the digital humanities course at university of leipzig in ws 2014
 
 - requires `python3` and `pip`
 - [@github](https://github.com/KLINGTdotNET/dh-project-ws14) [private]
+
+## motivation
+The aim of the project is to analyse texts in ancient greek new testment to identify the accustomed ways of using particles of specific authors. To achieve this aim, documents from several authors of the same era will be used for stylistic analysis (see xxx below) to determine their authorship attributions. Based on these statistics, some test documents of same authors will be used for verificaton. For the application, we intend to identify the authorship of anonymous texts. 
+
+The project also has follwoing prospectives: 
+- to characterise the stylistic development of an author through his life time
+- to observe the change of partical usage in greek lauguage through time by analyzing documents from different eras 
 
 ## particle
 
@@ -13,20 +21,16 @@
 - typically words that encode grammatical categories, such as negation (, mood, tense, or case not in greek!)
 
 ## tasks
-
-- sentences are everything between `.!?` (note that in greek the punctuation is different):
-    - period: `.`
-    - comma: `,`
-    - question mark: `;`
-    - semicolon: `·`
-- `,` commas will be ignored (temporarily)
-
-1. authorship attribution from stylistic analysis based on particle distribution
-    - frequency
-    - position in text
-        - relative position to other words
-            - one word before and one word after
-        - relative position to the beginning of the sentence, or subsentence `,`
+1. statistics used for the stylistic analysis
+    - particle
+        - frequency in text 
+        - its positions
+            - relative position to the beginning of the sentence, or subsentence `,`
+            - relative position to other words
+    - preceding and following words 
+        - what is the word directly before the particle and the one after
+        - which part of speechs do they possess
+        
 2. 5 (or 6) semantical categories of particles
     - make it possible to search for particles that are in a specific semantical category
 3. maybe: development of particle usage over time and in different genres
@@ -38,6 +42,14 @@
     - accent
     - combinations with other particles
     - combinations with other words
+
+## technical details
+- sentences are everything between `.!?` (note that in greek the punctuation is different):
+    - period: `.`
+    - comma: `,`
+    - question mark: `;`
+    - semicolon: `·`
+- `,` commas will be ignored (temporarily)
 
 ## instructions
 
