@@ -18,6 +18,10 @@ class Text():
     def len(self):
         return len(self.words)
 
+    def read(self, view='text'):
+        for word in self.words:
+            yield word.views[view]
+
     def neighbors(self, word):
         pos = word.textpos
         if pos > 0 and pos < self.len():
