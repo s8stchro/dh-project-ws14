@@ -8,7 +8,7 @@ def test_parse():
     for testpath in __get_testfiles():
         parsed = sblgnt.parse(str(testpath))
         assert parsed is not None
-        assert len(parsed) > 1
+        assert parsed.len() > 1
 
 def __get_testfiles():
     testpath = Path('data/sblgnt')
