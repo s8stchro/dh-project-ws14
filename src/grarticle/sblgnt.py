@@ -37,7 +37,7 @@ def parse_line(line):
     else:
         book, chapter, verse = parse_index(parts[0])
         parse_part_of_speech(parts[1])
-        parse_parsing_code(parts[2])
+        codes = parse_parsing_code(parts[2])
         text, word, normalised, lemma = tuple(parts[3:])
 
 def parse_index(part):
@@ -46,6 +46,7 @@ def parse_index(part):
     return res.groups()
 
 def parse_part_of_speech(part):
+    # todo, because the codes are currently unknown
     pass
 
 def parse_parsing_code(part):
@@ -63,5 +64,14 @@ def parse_parsing_code(part):
         number = grarticle.codes.number(codes[5])
         gender = grarticle.codes.gender(codes[6])
         degree = grarticle.codes.degree(codes[7])
-        print(person, tense, voice, mood, case, number, gender, degree)
+        return {
+            'person': person,
+            'tense': tense,
+            'voice': voice,
+            'mood': mood,
+            'case': case,
+            'number': number,
+            'gender': gender,
+            'degree': degree
+        }
 
