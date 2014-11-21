@@ -18,6 +18,11 @@ class Text():
     def len(self):
         return len(self.words)
 
+    def find(self, sought):
+        for word in self.words:
+            if sought in word.views['norm']:
+                return word
+
     def read(self, view='text'):
         for word in self.words:
             yield word.views[view]
