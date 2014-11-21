@@ -11,9 +11,35 @@ import grarticle
     http://morphgnt.org/sblgnt/
 '''
 
+class Text():
+    def __init__(self, words):
+        self.words = words
+
+    def len(self):
+        return len(self.words)
+
+    def neighbors(self, word):
+        pos = word.textpos
+        if pos > 0 and pos < self.len():
+            return [ self.words[pos-1], self.words[pos+1]]
+        elif pos == 0:
+            return [ self.words[1] ]
+        elif pos == self.len():
+            return [ self.words[self.len()-1] ]
+        else:
+            log.warn('Word position not inside text! "{}":"{}"'.format(pos, word.views['text']))
+
+class Word():
+    def __init__(self, word):
+        self.textpos = word['text_position']
+        self.book = word['book']
+        self.chapter = word['chapter']
+        self.verse = word['verse']
+        self.part_of_speech = word['part_of_speech']
+        self.codes = word['codes']
+        self.views = word['views']
+
 def parse(filepath):
-    '''
-    '''
     if os.path.exists(filepath):
         raw_text = ''
         try:
@@ -23,14 +49,14 @@ def parse(filepath):
             log.exception(e)
         else:
             if raw_text:
-                parsed_words = [ parse_line(line) for line in raw_text ]
-                return None
+                parsed_words = [ parse_line(index, line) for index, line in enumerate(raw_text) ]
+                return Text(parsed_words)
             else:
                 log.error('"{}" is empty!'.format(filepath))
     else:
         log.warn('Could not find file "{}"!'.format(filepath))
 
-def parse_line(line):
+def parse_line(index, line):
     parts = line.split()
     if len(parts) is not 7:
         log.warn('Malformed line: "{}"'.format(line))
@@ -39,6 +65,20 @@ def parse_line(line):
         parse_part_of_speech(parts[1])
         codes = parse_parsing_code(parts[2])
         text, word, normalised, lemma = tuple(parts[3:])
+        return Word({
+            'text_position': index,
+            'book': int(book),
+            'chapter': int(chapter),
+            'verse': int(verse),
+            'part_of_speech': None,
+            'codes': codes,
+            'views': {
+                'text': text,
+                'word': word,
+                'norm': normalised,
+                'lemma': lemma
+                }
+            })
 
 def parse_index(part):
     matcher = re.compile(r'(\d{2})(\d{2})(\d{2})')
