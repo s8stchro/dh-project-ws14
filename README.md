@@ -5,11 +5,11 @@
 - [@github](https://github.com/KLINGTdotNET/dh-project-ws14) [private]
 
 ## motivation
-The aim of the project is to analyse texts in ancient Greek New Testament to identify the accustomed ways of using particles of specific authors. To achieve this aim, documents from several authors of the same era will be used for stylistic analysis (see "tasks" below) to determine their authorship attributions. Based on these statistics, some test documents of same authors will be used for verificaton. For the application, we intend to identify the authorship of anonymous texts.
+The aim of the project is to analyse texts in ancient Greek New Testament to identify the accustomed ways of using particles of specific authors. To achieve this aim, documents from several authors of the same era will be used for stylistic analysis (see "tasks" below) to determine their authorship attributions. Based on these statistics, some test documents of the same authors will be used for verificaton. For the application, we intend to identify the authorship of anonymous texts.
 
-The project also has follwoing prospectives:
+The project also has following prospectives:
 - to characterise the stylistic development of an author through his life time
-- to observe the change of partical usage in greek lauguage through time by analyzing documents from different eras
+- to observe the change of partical usage in greek language through time by analyzing documents from different eras
 
 ## particle
 
@@ -18,7 +18,7 @@ The project also has follwoing prospectives:
 - only meaning in combination with other words or phrases
 - seperate part of speech
 - position in text is relevant, before a noun and after an adjective for example
-- typically words that encode grammatical categories, such as negation (, mood, tense, or case not in greek!)
+- typically words that encode grammatical categories, such as negation (, mood, tense, or case — not in greek!)
 
 ## tasks
 1. statistics used for the stylistic analysis
