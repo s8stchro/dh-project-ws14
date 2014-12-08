@@ -8,7 +8,7 @@
 The aim of the project is to analyse texts in ancient Greek New Testament to identify the accustomed ways of using particles of specific authors. To achieve this aim, documents from several authors of the same era will be used for stylistic analysis (see "tasks" below) to determine their authorship attributions. Based on these statistics, some test documents of the same authors will be used for verificaton. For the application, we intend to identify the authorship of anonymous texts.
 
 The project also has following prospectives:
-- to characterise the stylistic development of an author through his life time
+- to characterise the stylistic development of an author through his life time (for example, Paul the Apostle's work can be devided into three phases. One might be able to determine the stylistic changes between these phases)
 - to observe the change of partical usage in greek language through time by analyzing documents from different eras
 
 ## particle
@@ -25,7 +25,7 @@ The project also has following prospectives:
     - particle
         - frequency in text
         - its positions
-            - relative position to the beginning of the sentence, or subsentence `,`
+            - relative position to the beginning and end of the sentence, or subsentence `,`
             - relative position to other words
     - preceding and following words
         - what is the word directly before the particle and the one after
