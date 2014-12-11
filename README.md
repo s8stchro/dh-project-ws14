@@ -75,7 +75,7 @@ The project also has following prospectives:
         - removing and adding parameters into analysis
         - removing samples that contain too little information (e.g. frequency of certain particle is under certain threshold, see also point 3)
     - basically this is to determine which parameters are relavent to distinquisch these two authors
-2. then putting third group, likely-Paul, into the analysis and hopefully they go nicely into the group of Paul :-O
+2. then putting third group, likely-Paul, into the analysis and hopefully they go nicely into the group of Paul :fearful:
 3. determine which particles to use
     - setting threshold of frequency?
     - does the particle really changes its position in the sentences? if yes, how variate?
