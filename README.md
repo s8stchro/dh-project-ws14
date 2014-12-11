@@ -50,6 +50,7 @@ The project also has following prospectives:
     - question mark: `;`
     - semicolon: `·`
 - `,` commas will be ignored (temporarily)
+- Paulus letters are the [66-86](https://github.com/morphgnt/sblgnt) files in the sblgnt, see [wikipedia](http://de.wikipedia.org/wiki/Paulusbriefe)
 
 ## instructions
 
