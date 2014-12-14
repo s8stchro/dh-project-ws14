@@ -20,28 +20,70 @@ The project also has following prospectives:
 - position in text is relevant, before a noun and after an adjective for example
 - typically words that encode grammatical categories, such as negation (, mood, tense, or case — not in greek!)
 
-## tasks
-1. statistics used for the stylistic analysis
-    - particle
-        - frequency in text
-        - its positions
-            - relative position to the beginning and end of the sentence, or subsentence `,`
-            - relative position to other words
-    - preceding and following words
-        - what is the word directly before the particle and the one after
-        - which part of speechs do they possess
+## list of parameters for the statistics
+1. sample_no: 
+	- a sample = a letter
+2. authenticity
+	- three groups: Paul, Peter, likely-Paul
+3. particle
+4. part of speech (POS) 
+	- possibly 'C' (to be proved, see 'todo')
+5. particle_type
+	- three types: simple, composed, negation (according to Stelios’ list)
+6. occurrence
+	- how many times does the particle occur in the sample
+7. frequency
+	- occurrence / # words in the sample
+8. sentence break
+    - sentence break = .!?
+9. position from the start of the sentence
+10. position from the end of the sentence
+11. previous in-sentence punctuation (PIP)
+    - in-sentence punctuation = comma: `,` and semicolon: `·` 
+12. position to PIP
+13. follwing in-sentence punctuation (FIP)
+14. position to FIP
+15. POS of previous word
+16. POS of following word
+17. sentence
+	- for those who can read to check ;-)
 
-2. 5 (or 6) semantical categories of particles
-    - make it possible to search for particles that are in a specific semantical category
-3. maybe: development of particle usage over time and in different genres
+## Done-List
+1. list of particles and their variations
+2. determed sampling scope
+    - letters from Paul, Peter and likely-Paul
+3. accent is not relevant for the analysis and therefore take Lemma form for the analysis
+4. components of each word in a text sample can be parsed
 
 ## todo
-
-- understanding the meaning of abbreviations from the part of speech
-- getting the list of particles and their variations
-    - accent
-    - combinations with other particles
-    - combinations with other words
+1. determine POS-abbreviations for particle
+    - if all particles are labled as C in the samples? 
+    - what other POS are denoted as C?
+    => if we can determine particle with the label C? If not, what other constrains can be added?
+2. finalize the list of parameters to gather
+3. pull relevant letters (samples) into one order in Github
+4. python programm
+    - parsing of sentence
+    - queries to get parameters
+5. statistics
+    - methods: clustering, correlation, graphic representation, chi-square?
+    - which software to use?
+    
+## ideas for future use
+1. ideal results: in the cluster graph, two distinct groups are formed: Paul and Peter
+    - to achieve this, fine tuning of the parameters can be done by 
+        - removing and adding parameters into analysis
+        - removing samples that contain too little information (e.g. frequency of certain particle is under certain threshold, see also point 3)
+    - basically this is to determine which parameters are relavent to distinquisch these two authors
+2. then putting third group, likely-Paul, into the analysis and hopefully they go nicely into the group of Paul :fearful:
+3. determine which particles to use
+    - setting threshold of frequency?
+    - does the particle really changes its position in the sentences? if yes, how variate?
+    - ...
+4. run seperate cluster analysis for 
+    - frequency-related parameters
+    - position-related parameters
+    - the combination of both (i.e. all parameters)
 
 ## technical details
 - sentences are everything between `.!?` (note that in greek the punctuation is different):
