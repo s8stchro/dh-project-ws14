@@ -23,6 +23,15 @@ def test_text():
             text = parser.parse(str(fp))
             for word in text.words():
                 assert str(word) == str(word.sentence().words()[word.position()])
+            for sentence in text.sentences():
+                for index, word in enumerate(sentence.words()):
+                    n = word.neighbors()
+                    if index == 0:
+                        assert n['left'] is None
+                    elif index == len(sentence) - 1:
+                        assert n['right'] is None
+                    else:
+                        assert n['left'] is not None and n['right'] is not None
             assert text is not None
             hits = text.find('ἐν')
             assert hits is not None and len(hits) == 8
