@@ -1,2 +1,3 @@
 #!/bin/sh
-py.test --capture=sys
+
+py.test $@
