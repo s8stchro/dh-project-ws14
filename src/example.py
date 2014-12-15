@@ -8,7 +8,13 @@ text = sblgntparser.parser.parse(romans)
 if text:
     particles = [ word for word in text.words() if 'conjunction' in word.part_of_speech ]
     for particle in particles:
-       pass
+        print(particle, particle.position(), len(particle.sentence())-particle.position())
+        n = particle.neighbors()
+        if n['left']:
+            print(n['left'])
+        if n['right']:
+            print(n['right'])
+        print('\t{}'.format(particle.sentence()))
         # print(str(particle))
 
 for word in text.find('εὐαγγέλιον'):
