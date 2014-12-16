@@ -21,12 +21,12 @@ The project also has following prospectives:
 - typically words that encode grammatical categories, such as negation (, mood, tense, or case — not in greek!)
 
 ## list of parameters for the statistics
-1. sample_no: 
+1. sample_no:
 	- a sample = a letter
 2. authenticity
 	- three groups: Paul, Peter, likely-Paul
 3. particle
-4. part of speech (POS) 
+4. part of speech (POS)
 	- possibly 'C' (to be proved, see 'todo')
 5. particle_type
 	- three types: simple, composed, negation (according to Stelios’ list)
@@ -39,7 +39,7 @@ The project also has following prospectives:
 9. position from the start of the sentence
 10. position from the end of the sentence
 11. previous in-sentence punctuation (PIP)
-    - in-sentence punctuation = comma: `,` and semicolon: `·` 
+    - in-sentence punctuation = comma: `,` and semicolon: `·`
 12. position to PIP
 13. follwing in-sentence punctuation (FIP)
 14. position to FIP
@@ -57,7 +57,7 @@ The project also has following prospectives:
 
 ## todo
 1. determine POS-abbreviations for particle
-    - if all particles are labled as C in the samples? 
+    - if all particles are labled as C in the samples?
     - what other POS are denoted as C?
     => if we can determine particle with the label C? If not, what other constrains can be added?
 2. finalize the list of parameters to gather
@@ -68,10 +68,10 @@ The project also has following prospectives:
 5. statistics
     - methods: clustering, correlation, graphic representation, chi-square?
     - which software to use?
-    
+
 ## ideas for future use
 1. ideal results: in the cluster graph, two distinct groups are formed: Paul and Peter
-    - to achieve this, fine tuning of the parameters can be done by 
+    - to achieve this, fine tuning of the parameters can be done by
         - removing and adding parameters into analysis
         - removing samples that contain too little information (e.g. frequency of certain particle is under certain threshold, see also point 3)
     - basically this is to determine which parameters are relavent to distinquisch these two authors
@@ -80,7 +80,7 @@ The project also has following prospectives:
     - setting threshold of frequency?
     - does the particle really changes its position in the sentences? if yes, how variate?
     - ...
-4. run seperate cluster analysis for 
+4. run seperate cluster analysis for
     - frequency-related parameters
     - position-related parameters
     - the combination of both (i.e. all parameters)
@@ -92,7 +92,7 @@ The project also has following prospectives:
     - question mark: `;`
     - semicolon: `·`
 - `,` commas will be ignored (temporarily)
-- Paulus letters are the [66-86](https://github.com/morphgnt/sblgnt) files in the sblgnt, see [wikipedia](http://de.wikipedia.org/wiki/Paulusbriefe)
+- Paulus letters are the [66-77](https://github.com/morphgnt/sblgnt) files in the sblgnt, see [wikipedia](http://de.wikipedia.org/wiki/Paulusbriefe)
 
 ## instructions
 
