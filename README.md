@@ -21,31 +21,35 @@ The project also has following prospectives:
 - typically words that encode grammatical categories, such as negation (, mood, tense, or case — not in greek!)
 
 ## list of parameters for the statistics
-1. sample_no:
-	- a sample = a letter
-2. authenticity
-	- three groups: Paul, Peter, likely-Paul
-3. particle
-4. part of speech (POS)
+1. sample_no: 
+	- one number for each data row
+2. letter:
+	- first two digits of the source file name, for identification
+3. author
+	- name of author (likely)
+4. authenticity
+	- categories in wikipedia, coding see data/paul_letters.txt
+5. particle
+6. part of speech (POS)
 	- possibly 'C' (to be proved, see 'todo')
-5. particle_type
-	- three types: simple, composed, negation (according to Stelios’ list)
-6. occurrence
+7. particle_type
+	- three types: simple, combination, negation (according to Stelios’ list)
+8. occurrence
 	- how many times does the particle occur in the sample
-7. frequency
+9. frequency
 	- occurrence / # words in the sample
-8. sentence break
+10. sentence break
     - sentence break = .!?
-9. position from the start of the sentence
-10. position from the end of the sentence
-11. previous in-sentence punctuation (PIP)
+11. position from the start of the sentence
+12. position from the end of the sentence
+13. previous in-sentence punctuation (PIP)
     - in-sentence punctuation = comma: `,` and semicolon: `·`
-12. position to PIP
-13. follwing in-sentence punctuation (FIP)
-14. position to FIP
-15. POS of previous word
-16. POS of following word
-17. sentence
+14. position to PIP
+15. follwing in-sentence punctuation (FIP)
+16. position to FIP
+17. POS of previous word
+18. POS of following word
+19. sentence
 	- for those who can read to check ;-)
 
 ## Done-List
