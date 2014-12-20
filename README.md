@@ -30,34 +30,34 @@ The project also has following prospectives:
 4. authenticity
 	- categories in wikipedia, coding see data/paul_letters.txt
 5. particle
-6. part of speech (POS)
-	- possibly 'C' (to be proved, see 'todo')
-7. particle_type
-	- three types: simple, combination, negation (according to Stelios’ list)
-8. occurrence
-	- how many times does the particle occur in the sample
-9. frequency
-	- occurrence / # words in the sample
-10. sentence break
-    - sentence break = .!?
-11. position from the start of the sentence
-12. position from the end of the sentence
-13. previous in-sentence punctuation (PIP)
+6. part of speech (POS) of the particle
+7. position from the start of the sentence
+8. position from the end of the sentence
+9. left neighbor of the particle
+10. POS of left neighbor
+11. right neighbor of the particle
+12. POS of right neighbor
+13. previous in-sentence punctuation and the word (PIP)
     - in-sentence punctuation = comma: `,` and semicolon: `·`
-14. position to PIP
-15. follwing in-sentence punctuation (FIP)
-16. position to FIP
-17. POS of previous word
-18. POS of following word
-19. sentence
-	- for those who can read to check ;-)
+14. PIP position (from sentence start)
+15. follwing in-sentence punctuation and the word (FIP) 
+16. FIP position (from sentence start)
 
+### TODO Parameters
+1. particle_type (??)
+	- three types: simple, combination, negation (according to Stelios’ list)
+2. occurrence
+	- how many times does the particle occur in the sample
+3. frequency
+	- occurrence / # words in the sample
+	
 ## Done-List
 1. list of particles and their variations
 2. determed sampling scope
     - letters from Paul, Peter and likely-Paul
 3. accent is not relevant for the analysis and therefore take Lemma form for the analysis
 4. components of each word in a text sample can be parsed
+5. parameter extraction 80%
 
 ## todo
 1. determine POS-abbreviations for particle
