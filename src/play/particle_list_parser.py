@@ -1,3 +1,7 @@
+import json
+import logging
+log = logging.getLogger(__name__)
+
 def parse(filepath):
     raw = ''
     try:
@@ -36,8 +40,8 @@ def parse_lines(lines):
                 log.warn('particle without previous category specification: "{}"'.format(parts[1]))
     return data
 
-particles_dic = parse("../data/particles-python.txt")
-# print(particles_dic)
+particles_dict = parse("../data/particles-python.txt")
+# print(particles_dict)
 
 def particle(dic):
     '''
@@ -51,7 +55,7 @@ def particle(dic):
     return particles
 
 def particle_list():
-    particles = particle(particles_dic)
+    particles = particle(particles_dict)
     return particles
 
 def particle_type(particle):
@@ -59,15 +63,15 @@ def particle_type(particle):
     return the classfication type of a particle (simple, composed, negation)
     OUTPUT: simple, composed, negation
     '''
-    for key in particles_dic.keys():
-        for sublist in particles_dic.values():
+    for key in particles_dict.keys():
+        for sublist in particles_dict.values():
             if particle in sublist:
                 particle_type = key
     print(particle_type)
     return key
 
-    # for key in particles_dic.keys():
-    #     for sublist in particles_dic.values():
+    # for key in particles_dict.keys():
+    #     for sublist in particles_dict.values():
     #         if particle in sublist:
     #             particle_type = key
 

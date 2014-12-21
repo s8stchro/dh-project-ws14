@@ -1,3 +1,3 @@
 py==1.4.26
 pytest==2.6.4
-sblgntparser==0.3
+sblgntparser==0.3.2

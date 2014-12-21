@@ -1,7 +1,7 @@
 #! /usr/bin/env python3
 
 import sblgntparser
-from tests import file_io as io
+import file_io as io
 
 romans = '../data/sblgnt/66-Ro-morphgnt.txt'
 inPath = "../data/sblgnt/testFile"

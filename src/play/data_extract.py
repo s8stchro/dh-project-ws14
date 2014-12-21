@@ -1,8 +1,8 @@
 #! /usr/bin/env python3
 
 import sblgntparser
-from play import file_io as io
-from play import particle_list_parser as pparser
+import file_io as io
+import particle_list_parser as pparser
 from os.path import basename
 
 romans = '../data/sblgnt/66-Ro-morphgnt.txt'
