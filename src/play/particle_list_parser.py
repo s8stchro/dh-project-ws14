@@ -1,8 +1,7 @@
-import json
-import logging
-log = logging.getLogger(__name__)
+import pprint
+pp = pprint.PrettyPrinter(indent=4)
 
-def parse(filepath):
+def parse1(filepath):
     raw = ''
     try:
         with open(filepath) as f:
@@ -11,12 +10,12 @@ def parse(filepath):
         log.exception(e)
         return 1
     else:
-        return parse_lines(raw.splitlines())
+        return parse_list(raw.splitlines())
 
-def parse_lines(lines):
+def parse_list(lines):
     '''
     parser for particle list of stylianos
-    OUTPUT: a dictionary, key = type of particle, value = list of particles in lemma form
+    OUTPUT: a dictionary, key = particles, value = type of particles
     '''
     data = {}
     category = ''
@@ -24,60 +23,108 @@ def parse_lines(lines):
     for line in lines:
         parts = line.split()
         if parts[0] == '*':
-            category = ' '.join(parts[1:])
-            if category not in data:
-                data[category] = []
-            else:
-                log.warn('Category "{}" already defined!'.format(category))
+            category = parts[1]
         elif parts[0] == '**':
             if category:
-                if parts[1] not in data[category]:
-                    particle = parts[1]
-                    data[category].append(particle)
-                else:
-                    log.warn('Particle "{}" already contained in category: "{}"'.format(parts[1], category))
+                particle = parts[1]
+                data[particle]=category
             else:
                 log.warn('particle without previous category specification: "{}"'.format(parts[1]))
     return data
 
-particles_dict = parse("../data/particles-python.txt")
-# print(particles_dict)
+particles_dic = parse1("../data/particles.txt")
+# pp.pprint(particles_dic)
+# print(particles_dic['καί'])
 
-def particle(dic):
-    '''
-    pull particles into one list from stylianos' list (particles-python.txt)
-    OUTPUT: a list of particles in lemma form
-    '''
-    particles = []
-    for sublist in dic.values():
-        for word in sublist:
-            particles.append(word)
-    return particles
+authenticity_dic = parse1("../data/paul_letters.txt")
+# pp.pprint(authenticity_dic)
 
-def particle_list():
-    particles = particle(particles_dict)
-    return particles
+particles = particles_dic.keys()
+# print(particles)
 
-def particle_type(particle):
-    '''
-    return the classfication type of a particle (simple, composed, negation)
-    OUTPUT: simple, composed, negation
-    '''
-    for key in particles_dict.keys():
-        for sublist in particles_dict.values():
-            if particle in sublist:
-                particle_type = key
-    print(particle_type)
-    return key
+authenticity_groups = authenticity_dic.keys()
 
-    # for key in particles_dict.keys():
-    #     for sublist in particles_dict.values():
-    #         if particle in sublist:
-    #             particle_type = key
+# in-sentence punctuation = comma: , and semicolon: ·
+subsentence = [ ',', '·' ] # comma, semicolon
 
+# previous in-sentence punctuation (PIP)
 
-    #     if particle in sublist:
-    #         particle_type = key
-    # return key
+def parse_pip(position_from_start, sentence):
+    words = sentence.split()
+    particle = words[position_from_start-1]
+    index = position_from_start-1
+    # all words before the particle (not include particle)
+    words_to_search = words[0:index]
+    word_index = 0
+    pip_position1 = 0
+    pip_position2 = 0
+    pip1 = ''
+    pip2 = ''
+    for word in words_to_search:
+        word_index += 1
+        # the last ',' is saved within words_to_search
+        if ',' in word:
+            pip1 = word
+            pip_position1 = word_index
+        if '·' in word:
+            pip2 = word
+            pip_position2 = word_index
+    # no pip at all
+    pip = ''
+    pip_position = 0
+    if pip_position1 == pip_position2:
+        pip = 'null'
+        pip_position = 0
+    elif pip_position1 > pip_position2:
+        pip_position = pip_position1
+        pip = pip1
+    elif pip_position1 < pip_position2:
+        pip_position = pip_position2
+        pip = pip2
+    return (words_to_search, pip, pip_position)
+
+# follwing in-sentence punctuation (FIP)
+def parse_fip(position_from_start, sentence):
+    words = sentence.split()
+    particle = words[position_from_start-1]
+    index = position_from_start-1
+    # all words after the particle, including the particle self
+    words_to_search = words[index:]
+    word_index = index
+    fip_position1 = []
+    fip_position2 = []
+    fip1 = []
+    fip2 = []
+    for word in words_to_search:
+        word_index += 1
+        # the first ',' is saved within words_to_search
+        if ',' in word:
+            fip1.append(word)
+            fip_position1.append(word_index)
+            # print('fip1:',fip1,fip_position1)
+        if '·' in word:
+            fip2.append(word)
+            fip_position2.append(word_index)
+            # print('fip2:',fip2,fip_position2)
+    fip = ''
+    fip_position = 0
+    if not (fip_position1 or fip_position2):
+        fip_position = 0
+        fip = 'null'
+    elif fip_position1 and not fip_position2:
+        fip_position = fip_position1[0]
+        fip = fip1[0]
+    elif not fip_position1 and fip_position2:
+          fip_position = fip_position2[0]
+          fip = fip2[0]
+    elif fip_position1 and fip_position2:
+        if fip_position1[0] < fip_position2[0]:
+            fip_position = fip_position1[0]
+            fip = fip1[0]
+        else:
+            fip_position = fip_position2[0]
+            fip = fip2[0]
+    return (words_to_search,fip, fip_position)
+
 
 
