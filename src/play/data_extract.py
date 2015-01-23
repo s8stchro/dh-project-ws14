@@ -8,8 +8,8 @@ import sys
 import pprint
 pp = pprint.PrettyPrinter(indent=4)
 
-infolder = "../data/paul"
-outfolder = "../data/output"
+infolder = "../../data/paul"
+outfolder = "../../data/output"
 
 # infile = inFolder path + filename
 infiles = io.get_infiles(infolder)
@@ -58,7 +58,7 @@ def parse_data(text,infile, conjunctions,particles):
                 words = pparser.parse_fip(position_from_start, sentence)[0]
                 fip = pparser.parse_fip(position_from_start, sentence)[1]
                 fip_position = pparser.parse_fip(position_from_start, sentence)[2]
-                data.append([sample_no,letter, author, authenticity, str(particle), part_of_speech, position_from_start, position_from_end,str(left_neighbor), left_neighbor_pos, str(right_neighbor), right_neighbor_pos,pip,pip_position,fip,fip_position,sentence])
+                data.append([sample_no,letter, author, authenticity, str(conjunction.views['lemma']), part_of_speech, position_from_start, position_from_end,str(left_neighbor), left_neighbor_pos, str(right_neighbor), right_neighbor_pos,pip,pip_position,fip,fip_position,sentence])
         return data
 
 # parse all conjunctions in the text

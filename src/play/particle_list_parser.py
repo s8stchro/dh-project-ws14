@@ -32,11 +32,15 @@ def parse_list(lines):
                 log.warn('particle without previous category specification: "{}"'.format(parts[1]))
     return data
 
-particles_dic = parse1("../data/particles.txt")
+# parse particle categories, output as a dictionary
+# particles_dic = parse1("../../data/paul/particles.txt")
+particles_dic ="../../data/dicts"
+
 # pp.pprint(particles_dic)
 # print(particles_dic['καί'])
 
-authenticity_dic = parse1("../data/paul_letters.txt")
+# parse letter type according to paul_letters.txt
+authenticity_dic = parse1("../../data/paul_letters.txt")
 # pp.pprint(authenticity_dic)
 
 particles = particles_dic.keys()
