@@ -1,4 +1,4 @@
-sample_no	particle	position_from_start	position_from_end	left_neighbor	left_neighbor_pos	right_neighbor	right_neighbor_pos	pip	pip_position	fip	fip_position
+sample_no	letter	author	authenticity	particle	part_of_speech	position_from_start	position_from_end	left_neighbor	left_neighbor_pos	right_neighbor	right_neighbor_pos	pip	pip_position	fip	fip_position	sentence
 1	73	Paul	P1	καί	conjunction	2	19	Παῦλος	noun	Σιλουανὸς	noun	null	0	Χριστῷ·	15	Παῦλος καὶ Σιλουανὸς καὶ Τιμόθεος τῇ ἐκκλησίᾳ Θεσσαλονικέων ἐν θεῷ πατρὶ καὶ κυρίῳ Ἰησοῦ Χριστῷ· χάρις ὑμῖν καὶ ⸀εἰρήνη.
 2	73	Paul	P1	καί	conjunction	4	17	Σιλουανὸς	noun	Τιμόθεος	noun	null	0	Χριστῷ·	15	Παῦλος καὶ Σιλουανὸς καὶ Τιμόθεος τῇ ἐκκλησίᾳ Θεσσαλονικέων ἐν θεῷ πατρὶ καὶ κυρίῳ Ἰησοῦ Χριστῷ· χάρις ὑμῖν καὶ ⸀εἰρήνη.
 3	73	Paul	P1	καί	conjunction	12	9	πατρὶ	noun	κυρίῳ	noun	null	0	Χριστῷ·	15	Παῦλος καὶ Σιλουανὸς καὶ Τιμόθεος τῇ ἐκκλησίᾳ Θεσσαλονικέων ἐν θεῷ πατρὶ καὶ κυρίῳ Ἰησοῦ Χριστῷ· χάρις ὑμῖν καὶ ⸀εἰρήνη.

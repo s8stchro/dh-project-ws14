@@ -1,4 +1,4 @@
-sample_no	particle	position_from_start	position_from_end	left_neighbor	left_neighbor_pos	right_neighbor	right_neighbor_pos	pip	pip_position	fip	fip_position
+sample_no	letter	author	authenticity	particle	part_of_speech	position_from_start	position_from_end	left_neighbor	left_neighbor_pos	right_neighbor	right_neighbor_pos	pip	pip_position	fip	fip_position	sentence
 1	70	Paul	P2	καί	conjunction	14	18	Ἐφέσῳ]⸃	noun	πιστοῖς	adjective	null	0	Ἰησοῦ·	18	Παῦλος ἀπόστολος ⸂Χριστοῦ Ἰησοῦ⸃ διὰ θελήματος θεοῦ τοῖς ἁγίοις τοῖς οὖσιν ⸂[ἐν Ἐφέσῳ]⸃ καὶ πιστοῖς ἐν Χριστῷ Ἰησοῦ· χάρις ὑμῖν καὶ εἰρήνη ἀπὸ θεοῦ πατρὸς ἡμῶν καὶ κυρίου Ἰησοῦ Χριστοῦ.
 2	70	Paul	P2	καί	conjunction	21	11	ὑμῖν	personal pronoun	εἰρήνη	noun	Ἰησοῦ·	18	null	0	Παῦλος ἀπόστολος ⸂Χριστοῦ Ἰησοῦ⸃ διὰ θελήματος θεοῦ τοῖς ἁγίοις τοῖς οὖσιν ⸂[ἐν Ἐφέσῳ]⸃ καὶ πιστοῖς ἐν Χριστῷ Ἰησοῦ· χάρις ὑμῖν καὶ εἰρήνη ἀπὸ θεοῦ πατρὸς ἡμῶν καὶ κυρίου Ἰησοῦ Χριστοῦ.
 3	70	Paul	P2	καί	conjunction	27	5	ἡμῶν	personal pronoun	κυρίου	noun	Ἰησοῦ·	18	null	0	Παῦλος ἀπόστολος ⸂Χριστοῦ Ἰησοῦ⸃ διὰ θελήματος θεοῦ τοῖς ἁγίοις τοῖς οὖσιν ⸂[ἐν Ἐφέσῳ]⸃ καὶ πιστοῖς ἐν Χριστῷ Ἰησοῦ· χάρις ὑμῖν καὶ εἰρήνη ἀπὸ θεοῦ πατρὸς ἡμῶν καὶ κυρίου Ἰησοῦ Χριστοῦ.
