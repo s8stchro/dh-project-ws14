@@ -22,11 +22,11 @@ The project also has following prospectives:
 
 ## data range
 - 14 letters of Paul and those likely by Paul (numbers are the numeration in [sblgnt](https://github.com/morphgnt/sblgnt), more info see [wikipedia](http://de.wikipedia.org/wiki/Paulusbriefe))
-    - 'P1': ['66', '67', '68', '69', '71', '73', '78']
-    - 'P1/P2': ['72']
-    - 'P2': ['70', '74']
-    - 'P3': ['75', '76', '77']
-    - 'pP': ['79']
+    - 'P1': ['66', '67', '68', '69', '71', '73', '78'] (from Paul)
+    - 'P1/P2': ['72'] (probably)
+    - 'P2': ['70', '74'] (from Paul's time, but not from him)
+    - 'P3': ['75', '76', '77'] (after Paul's time, but not from him)
+    - 'pP': ['79'] (not him)
 - 2 letters of Peter
 
 ## parameter extraction using python
