@@ -20,6 +20,20 @@ The project also has following prospectives:
 - position in text is relevant, before a noun and after an adjective for example
 - typically words that encode grammatical categories, such as negation (, mood, tense, or case — not in greek!)
 
+## data range
+- 14 letters of Paul and those likely by Paul (numbers are the numeration in [sblgnt](https://github.com/morphgnt/sblgnt), more info see [wikipedia](http://de.wikipedia.org/wiki/Paulusbriefe))
+    'P1': ['66', '67', '68', '69', '71', '73', '78']
+    'P1/P2': ['72']
+    'P2': ['70', '74']
+    'P3': ['75', '76', '77']
+    'pP': ['79']
+- 2 letters of Peter
+
+## parameter extraction using python
+1. all words denoted as C (conjunctions) are extracted
+2. the conjunctions are filtered using the particle list (/data/dicts) via their Lemman-form
+    - observation: in sblgnt, 'τε' has two forms 'τε' and 'τέ'
+
 ## list of parameters for the statistics
 1. sample_no: 
 	- one number for each data row
@@ -57,19 +71,22 @@ The project also has following prospectives:
     - letters from Paul, Peter and likely-Paul
 3. accent is not relevant for the analysis and therefore take Lemma form for the analysis
 4. components of each word in a text sample can be parsed
-5. parameter extraction 80%
-
-## todo
-1. determine POS-abbreviations for particle
+5. parameter extraction with python program, output as csv file
+6. determine POS-abbreviations for particle
     - if all particles are labled as C in the samples?
+    - nope! Z.B.
+    060832 X- -------- γε γε γέ γέ  (X=exclamation) => these cases are rare and are excluded from statistical analysis
     - what other POS are denoted as C?
     => if we can determine particle with the label C? If not, what other constrains can be added?
-2. finalize the list of parameters to gather
-3. pull relevant letters (samples) into one order in Github
-4. python programm
+    - see "parameter extraction using python"
+7. finalized the list of parameters to gather
+
+## todo
+1. python programm (Andreas's tool)
     - parsing of sentence
     - queries to get parameters
-5. statistics
+2. to extract parameters of Peter's letters
+2. statistics
     - methods: clustering, correlation, graphic representation, chi-square?
     - which software to use?
 
@@ -90,13 +107,13 @@ The project also has following prospectives:
     - the combination of both (i.e. all parameters)
 
 ## technical details
-- sentences are everything between `.!?` (note that in greek the punctuation is different):
+- sentences are everything between `.!;` (note that in greek the punctuation '?' is different):
     - period: `.`
     - comma: `,`
     - question mark: `;`
+- in-sentence punctuations are:
     - semicolon: `·`
-- `,` commas will be ignored (temporarily)
-- Paulus letters are the [66-77](https://github.com/morphgnt/sblgnt) files in the sblgnt, see [wikipedia](http://de.wikipedia.org/wiki/Paulusbriefe)
+    - comma: `,`
 
 ## instructions
 
