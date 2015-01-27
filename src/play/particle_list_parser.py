@@ -32,19 +32,16 @@ def parse_list(lines):
                 log.warn('particle without previous category specification: "{}"'.format(parts[1]))
     return data
 
-# parse particle categories, output as a dictionary
-# particles_dic = parse1("../../data/paul/particles.txt")
-particles_dic ="../../data/dicts"
-
+particles_dic = parse1("../data/particles.txt")
 # pp.pprint(particles_dic)
 # print(particles_dic['καί'])
 
-# parse letter type according to paul_letters.txt
-authenticity_dic = parse1("../../data/paul_letters.txt")
+authenticity_dic = parse1("../data/paul_letters.txt")
 # pp.pprint(authenticity_dic)
 
 particles = particles_dic.keys()
-# print(particles)
+# τέ has two forms!! added in the particles.txt
+print(particles)
 
 authenticity_groups = authenticity_dic.keys()
 

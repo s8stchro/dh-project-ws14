@@ -8,8 +8,13 @@ import sys
 import pprint
 pp = pprint.PrettyPrinter(indent=4)
 
-infolder = "../../data/paul"
-outfolder = "../../data/output"
+# infolder = "../data/paul"
+# outfolder = "../data/output/paul"
+
+infolder = "../data/peter"
+outfolder = "../data/output/peter"
+
+# outfolder = "../data/output_clean"
 
 # infile = inFolder path + filename
 infiles = io.get_infiles(infolder)
@@ -22,6 +27,8 @@ authenticity_groups = pparser.authenticity_groups
 # parameters to parse
 labels = ('sample_no','letter', 'author', 'authenticity', 'particle', 'part_of_speech', 'position_from_start', 'position_from_end', 'left_neighbor', 'left_neighbor_pos', 'right_neighbor', 'right_neighbor_pos','pip','pip_position','fip','fip_position', 'sentence')
 
+label_matplot = ('sample_no', 'particle', 'position_from_start', 'position_from_end', 'left_neighbor', 'left_neighbor_pos', 'right_neighbor', 'right_neighbor_pos','pip','pip_position','fip','fip_position')
+
 def parse_data(text,infile, conjunctions,particles):
     '''
     parse parameters from infile
@@ -31,7 +38,10 @@ def parse_data(text,infile, conjunctions,particles):
     if text:
         # letter number is the first two digits of a file name
         letter = io.letter_no(infile)
-        author = 'Paul'
+        if int(letter) < 80:
+            author = 'Paul'
+        else:
+            author = 'Peter'
         data = []
         # for all words with pos as conjunction
         for conjunction in conjunctions:
@@ -59,6 +69,8 @@ def parse_data(text,infile, conjunctions,particles):
                 fip = pparser.parse_fip(position_from_start, sentence)[1]
                 fip_position = pparser.parse_fip(position_from_start, sentence)[2]
                 data.append([sample_no,letter, author, authenticity, str(conjunction.views['lemma']), part_of_speech, position_from_start, position_from_end,str(left_neighbor), left_neighbor_pos, str(right_neighbor), right_neighbor_pos,pip,pip_position,fip,fip_position,sentence])
+                ### data without sentence
+                # data.append([sample_no, str(conjunction.views['lemma']), part_of_speech, position_from_start, position_from_end,str(left_neighbor), left_neighbor_pos, str(right_neighbor), right_neighbor_pos,pip,pip_position,fip,fip_position])
         return data
 
 # parse all conjunctions in the text
@@ -74,7 +86,8 @@ for infile in infiles:
     except OSError:
         pass
     data_list = parse_data(text,infile,conjunctions,particles)
-    io.write_outfile(outfile,labels)
+    # io.write_outfile(outfile,labels)
+    io.write_outfile(outfile,label_matplot)
     for data in data_list:
         io.write_outfile(outfile,data)
 
