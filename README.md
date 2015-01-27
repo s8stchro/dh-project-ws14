@@ -22,11 +22,11 @@ The project also has following prospectives:
 
 ## data range
 - 14 letters of Paul and those likely by Paul (numbers are the numeration in [sblgnt](https://github.com/morphgnt/sblgnt), more info see [wikipedia](http://de.wikipedia.org/wiki/Paulusbriefe))
-    'P1': ['66', '67', '68', '69', '71', '73', '78']
-    'P1/P2': ['72']
-    'P2': ['70', '74']
-    'P3': ['75', '76', '77']
-    'pP': ['79']
+    - 'P1': ['66', '67', '68', '69', '71', '73', '78']
+    - 'P1/P2': ['72']
+    - 'P2': ['70', '74']
+    - 'P3': ['75', '76', '77']
+    - 'pP': ['79']
 - 2 letters of Peter
 
 ## parameter extraction using python
@@ -74,11 +74,11 @@ The project also has following prospectives:
 5. parameter extraction with python program, output as csv file
 6. determine POS-abbreviations for particle
     - if all particles are labled as C in the samples?
-    - nope! Z.B.
-    060832 X- -------- γε γε γέ γέ  (X=exclamation) => these cases are rare and are excluded from statistical analysis
+    	- nope! Z.B.
+    	060832 X- -------- γε γε γέ γέ  (X=exclamation) => these cases are rare and are excluded from statistical analysis
     - what other POS are denoted as C?
     => if we can determine particle with the label C? If not, what other constrains can be added?
-    - see "parameter extraction using python"
+    	- see "parameter extraction using python"
 7. finalized the list of parameters to gather
 
 ## todo
