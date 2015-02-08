@@ -1,0 +1,43 @@
+
+R version 3.1.2 (2014-10-31) -- "Pumpkin Helmet"
+Copyright (C) 2014 The R Foundation for Statistical Computing
+Platform: x86_64-apple-darwin13.4.0 (64-bit)
+
+R is free software and comes with ABSOLUTELY NO WARRANTY.
+You are welcome to redistribute it under certain conditions.
+Type 'license()' or 'licence()' for distribution details.
+
+  Natural language support but running in an English locale
+
+R is a collaborative project with many contributors.
+Type 'contributors()' for more information and
+'citation()' on how to cite R or R packages in publications.
+
+Type 'demo()' for some demos, 'help()' for on-line help, or
+'help.start()' for an HTML browser interface to help.
+Type 'q()' to quit R.
+
+[Previously saved workspace restored]
+
+> library(ggplot2)
+> par6 <- read.csv("../../data/output/paul_freq_par/par6_frequency.csv", header=TRUE, sep="\t")
+> letters <- unique(par6$letter)
+> filename <- paste0("../../data/output/paul_R_par/plots/par6_lt76.png")
+> png(filename)
+> lt76 <- par6[which(par6$letter==76),]
+> lt76$perc_label[lt76$perc_label == 0] <- NA
+> lt76_count = sum(lt76$freq_t)
+> ymax <- max(lt76$freq_t)
+> ymax_s = ymax*1.1-ymax
+> title <- paste(lt76$particle[1], " (total_count = ", lt76_count,", letter =", 76,")" )
+> p_freq_t <- barplot(lt76$freq_t, main=title, xlab="Position", ylab= "Frequency" ,col=c("cyan4"), names.arg=lt76$position,ylim=c(0,ymax*1.2))
+> p_freq_s<- barplot(lt76$freq_s, col=c("darkgoldenrod1"),add=T)
+> legend("topright", inset=.05, c("position_from_pip","position_from_start"), fill=c("cyan4","darkgoldenrod1"))
+> text(p_freq_t, lt76$freq_t-(ymax_s/2), labels= lt76$freq_is, col="white")
+> text(p_freq_s, lt76$freq_s-(ymax_s/2), labels=lt76$freq_s, col="black")
+> text(p_freq_t, lt76$freq_t+ymax_s, labels=lt76$perc_label, col="blue",srt=90)
+> 
+> 
+> proc.time()
+   user  system elapsed 
+  0.802   0.061   0.909 
