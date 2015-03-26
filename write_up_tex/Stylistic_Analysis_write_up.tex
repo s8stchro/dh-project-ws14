@@ -10,6 +10,10 @@
 \usepackage{array}
 \usepackage{enumitem}
 
+  \usepackage[utf8]{inputenc}
+  \usepackage[T1]{fontenc}
+  \usepackage[polutonikogreek,english]{betababel}
+  \renewcommand{\textgreek}[1]{{\selectlanguage{greek}#1}}
 %TODO typing Greek in Latex???
 
 \begin{document}
@@ -37,7 +41,7 @@ Luckily, the SBLGNT format stores a lot of information for every word in each of
 %TODO GREEK LETTERS!!
 010101 N- ----NSF-\textgreek{?????? ?????? ?????? ??????}
 
-The first six digits are three pairs of two numbers each, they store the book, chapter and verse where the word in this row occurs in the book. The next two characters encode the part of speech of the word, in this example the word is a noun. Thereafter are the codes that describe certain features of a word, like person, tense, mood, degree and so on. We had to reverse engineer the meaning of the codes, with the help of  \href{http://jtauber.com/2010/07/parse-helper/demo.html}{this tool}, because there was no description available or we haven�t found it. The last four words in the row are different forms of the word, the text, word, normalized and lemma form. We only used the lemma form for our queries because this is the one that is the same for different shapes of the same word. \\
+The first six digits are three pairs of two numbers each, they store the book, chapter and verse where the word in this row occurs in the book. The next two characters encode the part of speech of the word, in this example the word is a noun. Thereafter are the codes that describe certain features of a word, like person, tense, mood, degree and so on. We had to reverse engineer the meaning of the codes, with the help of  \href{http://jtauber.com/2010/07/parse-helper/demo.html}{this tool}, because there was no description available or we havenÕt found it. The last four words in the row are different forms of the word, the text, word, normalized and lemma form. We only used the lemma form for our queries because this is the one that is the same for different shapes of the same word. \\
 
 While parsing the data set, I enriched each word in the data model with their position in the sentence (remember there is only the verse encoded in the source), the position in the whole text, the distance to the next in-sentence punctuation (g.e. commata) and each word was linked to its neighbours in the sentence. This gave us the possibility to reason about words based on the type and form of their surrounding words.  \\
 
@@ -66,9 +70,9 @@ With the help of sblgntparser, the following variables of data are extracted fro
 \end{enumerate}
 
 % SEMICOLON NOT SHOWN
-\noindent For the parsing, sentences are defined as text (including in-sentence punctuations) separated by period ( . ), comma ( , ) and greek question mark ( ; ). In-sentence punctuations are semicolon ( � ) and comma ( , ). 
+\noindent For the parsing, sentences are defined as text (including in-sentence punctuations) separated by period ( . ), comma ( , ) and greek question mark ( ; ). In-sentence punctuations are semicolon ( á ) and comma ( , ). 
 
-All the particle occurrences in every corpus and their relevant fields mentioned above are extracted using Python. The results are available at: \href{https://github.com/KLINGTdotNET/dh-project-ws14/tree/master/data/output/paul_par}{Paul�s letters} and \href{https://github.com/KLINGTdotNET/dh-project-ws14/tree/master/data/output/peter_par}{Peter�s letters}.
+All the particle occurrences in every corpus and their relevant fields mentioned above are extracted using Python. The results are available at: \href{https://github.com/KLINGTdotNET/dh-project-ws14/tree/master/data/output/paul_par}{PaulÕs letters} and \href{https://github.com/KLINGTdotNET/dh-project-ws14/tree/master/data/output/peter_par}{PeterÕs letters}.
 
 \subsection{Absolute position analysis}
 Generally speaking, when a particle is rarely used and has very strict syntax rule so that position variation in a sentence is hardly possible, it is less suitable for stylometric analysis. In the search of suitable particles in the corpus, in addition to extract the overall frequency of each particle in all sample letters, visualisation of the absolute positions of each particle in each letter is also carried out.  
@@ -76,13 +80,13 @@ Generally speaking, when a particle is rarely used and has very strict syntax ru
 \subsection{Visualisation of absolute position analysis}
 Absolute position of a particle is defined as the position of the particle from the nearest previous punctuation which includes sentence separating punctuation and in-sentence punctuation (PIP). For each particle, its frequency (\textit{number of occurrence in the letter}) in each absolute position is extracted using Python. Furthermore, its position distribution is calculated as (\textit{number of occurrence in each position})/(\textit{total occurrence of the particle in the letter}). The frequency-position plots for each particle in each letter are drawn using R. To distinguish between types of absolute positions, yellow color is used to depict absolute positions from the start of a sentence and green is for absolute position after a PIP. The quellcodes for frequency extraction are on \href{https://github.com/KLINGTdotNET/dh-project-ws14/tree/master/src/absolute_freq}{this page}. \\
 
-\noindent In file �run.sh� contains the workflow of the frequency extraction and plotting, with some batch files in between to connect the subprocesses. For easier comparison, plots are grouped by particles and output as PDF files. 
+\noindent In file Òrun.shÓ contains the workflow of the frequency extraction and plotting, with some batch files in between to connect the subprocesses. For easier comparison, plots are grouped by particles and output as PDF files. 
 
 \subsection{Selection of particles}
 Particles with a minimum occurrence in the corpus and with suitable variations in terms of their absolute positions are those we aim for. The following describes the selection by these two criteria:
 
 \paragraph{by frequency} 
-for each author, the frequencies of every particle in each letter and their overall occurrence in all letters are shown in Table 1. Particles occur most frequently in Paul�s letters correspondent to those in Peter�s letters and the rankings of occurrence are also identical between both authors. Based on the this frequency results,  particles ???(kai), ???(de) and ???(yap) are selected for absolute position analysis. \\
+for each author, the frequencies of every particle in each letter and their overall occurrence in all letters are shown in Table 1. Particles occur most frequently in PaulÕs letters correspondent to those in PeterÕs letters and the rankings of occurrence are also identical between both authors. Based on the this frequency results,  particles ???(kai), ???(de) and ???(yap) are selected for absolute position analysis. \\
 
 %TODO Greek letters
 {\renewcommand{\arraystretch}{1.3}
@@ -112,9 +116,9 @@ Particle &	\multicolumn{2}{c}{Frequency} \\
 
 % TODO Greek letters
 \paragraph{by absolute position variation}
-???(kai) (engl. and) is the most frequent particle of all. Its absolute position in each letter can be seen in Figure \ref{paul_kai} and \ref{peter_kai}. In most letters of Paul, ???(kai) occurs most frequently at position one, with frequency distribution ranges from 15.6\%  to 42.7\%. Three exceptions with most dominant position at position five are letters 75, 77 and 78. Letters 77 and 78 have the least ???(kai) occurrence (34 and 13 counts, respectively) and letter 78 has moderate frequent of ???(kai) (83 counts). The two letters from Peter show also the same patterns, in letter 79, 39\% of the occurrence are at position one and with a small total count of 13, ???(kai) occurs most frequency in position two in letter 78. Since letter 78 is confirmed to be written by Paul and letters 75 and 77 are categorized as uncertain by Paul and additionally, both patterns are observed by two Peter�s letters, leads to the conclusion that the observed patterns of ???(kai) is not distinct for identification of authorship.\\
+\textgreek{καί}(kai) (engl. and) is the most frequent particle of all. Its absolute position in each letter can be seen in Figure \ref{paul_kai} and \ref{peter_kai}. In most letters of Paul, ???(kai) occurs most frequently at position one, with frequency distribution ranges from 15.6\%  to 42.7\%. Three exceptions with most dominant position at position five are letters 75, 77 and 78. Letters 77 and 78 have the least ???(kai) occurrence (34 and 13 counts, respectively) and letter 78 has moderate frequent of ???(kai) (83 counts). The two letters from Peter show also the same patterns, in letter 79, 39\% of the occurrence are at position one and with a small total count of 13, ???(kai) occurs most frequency in position two in letter 78. Since letter 78 is confirmed to be written by Paul and letters 75 and 77 are categorized as uncertain by Paul and additionally, both patterns are observed by two PeterÕs letters, leads to the conclusion that the observed patterns of ???(kai) is not distinct for identification of authorship.\\
 
-???(de), the second most frequent particles of all, always dominant at position 2 in all letters (Figure \ref{paul_de} and \ref{peter_de}). Same pattern is observed with ???(yap) with mostly at least 80\% of the occurrence at position two (Figure \ref{paul_yap} and \ref{peter_yap}). Little variations on dominant position of ???(akka) is also seen (Figure \ref{paul_akka} and \ref{peter_akka}). Therefore, these three particles do not indicate obvious difference between two authors or between different categories of Paul�s letters. 
+\textgreek{δέ}(de), the second most frequent particles of all, always dominant at position 2 in all letters (Figure \ref{paul_de} and \ref{peter_de}). Same pattern is observed with ???(yap) with mostly at least 80\% of the occurrence at position two (Figure \ref{paul_yap} and \ref{peter_yap}). Little variations on dominant position of ???(akka) is also seen (Figure \ref{paul_akka} and \ref{peter_akka}). Therefore, these three particles do not indicate obvious difference between two authors or between different categories of PaulÕs letters. 
 
 The analysis results show that little absolute position variation is observed in the most of the most frequent particles, ???(de) and ???(yap), ???(akka) in the corpus. Though ???(kai) occurs in more positions in the sentences, its variation in position distribution can be due to small sample size than authorship difference. Therefore, in order to get more accurate results, longer text and larger corpus is recommended to be used. 
 
@@ -173,7 +177,7 @@ The analysis results show that little absolute position variation is observed in
 \centering
 \includegraphics[width=1\linewidth]{paul_plots/par3_lt77.png}
 \end{subfigure}
-\caption{Frequency of particle ???(kai) at each absolute position in Pauline letters}
+\caption{Frequency of particle \textgreek{καί}(kai) at each absolute position in Pauline letters}
 \end{figure}
 
 \begin{figure}
@@ -198,7 +202,7 @@ The analysis results show that little absolute position variation is observed in
 \centering
 \includegraphics[width=1\linewidth]{peter_plots/par3_lt82.png}
 \end{subfigure}
-\caption{Frequency of particle ???(kai) at each absolute position in petrine letters}
+\caption{Frequency of particle \textgreek{καί}(kai) at each absolute position in petrine letters}
 \label{peter_kai}
 \end{figure}
 
@@ -227,7 +231,7 @@ The analysis results show that little absolute position variation is observed in
 \centering
 \includegraphics[width=1\linewidth]{paul_plots/par2_lt71.png}
 \end{subfigure}
-\caption{Frequency of particle ???(de) at each absolute position in Pauline letters}
+\caption{Frequency of particle \textgreek{δέ}(de) at each absolute position in Pauline letters}
 \label{paul_de}
 \end{figure}
 
@@ -257,7 +261,7 @@ The analysis results show that little absolute position variation is observed in
 \centering
 \includegraphics[width=1\linewidth]{paul_plots/par2_lt77.png}
 \end{subfigure}
-\caption{Frequency of particle ???(de) at each absolute position in Pauline letters}
+\caption{Frequency of particle \textgreek{δέ}(de) at each absolute position in Pauline letters}
 \end{figure}
 
 \begin{figure}
@@ -270,7 +274,7 @@ The analysis results show that little absolute position variation is observed in
 \centering
 \includegraphics[width=1\linewidth]{paul_plots/par2_lt79.png}
 \end{subfigure}
-\caption{Frequency of particle ???(de) at each absolute position in Pauline letters}
+\caption{Frequency of particle \textgreek{δέ}(de) at each absolute position in Pauline letters}
 \end{figure}
 
 \begin{figure}
@@ -282,7 +286,7 @@ The analysis results show that little absolute position variation is observed in
 \centering
 \includegraphics[width=1\linewidth]{peter_plots/par2_lt82.png}
 \end{subfigure}
-\caption{Frequency of particle ???(de) at each absolute position in petrine letters}
+\caption{Frequency of particle \textgreek{δέ}(de) at each absolute position in petrine letters}
 \label{peter_de}
 \end{figure}
 
@@ -311,7 +315,7 @@ The analysis results show that little absolute position variation is observed in
 \centering
 \includegraphics[width=1\linewidth]{paul_plots/par1_lt71.png}
 \end{subfigure}
-\caption{Frequency of particle ???(yap) at each absolute position in Pauline letters}
+\caption{Frequency of particle \textgreek{γάρ}(gar) at each absolute position in Pauline letters}
 \label{paul_yap}
 \end{figure}
 
@@ -341,7 +345,7 @@ The analysis results show that little absolute position variation is observed in
 \centering
 \includegraphics[width=1\linewidth]{paul_plots/par1_lt77.png}
 \end{subfigure}
-\caption{Frequency of particle ???(yap) at each absolute position in Pauline letters}
+\caption{Frequency of particle \textgreek{γάρ}(gar) at each absolute position in Pauline letters}
 \end{figure}
 
 \begin{figure}
@@ -354,7 +358,7 @@ The analysis results show that little absolute position variation is observed in
 \centering
 \includegraphics[width=1\linewidth]{paul_plots/par1_lt79.png}
 \end{subfigure}
-\caption{Frequency of particle ???(yap) at each absolute position in Pauline letters}
+\caption{Frequency of particle \textgreek{γάρ}(gar) at each absolute position in Pauline letters}
 \end{figure}
 
 \begin{figure}
@@ -366,7 +370,7 @@ The analysis results show that little absolute position variation is observed in
 \centering
 \includegraphics[width=1\linewidth]{peter_plots/par1_lt82.png}
 \end{subfigure}
-\caption{Frequency of particle ???(yap) at each absolute position in petrine letters}
+\caption{Frequency of particle \textgreek{γάρ}(gar) at each absolute position in petrine letters}
 \label{peter_yap}
 \end{figure}
 
@@ -460,7 +464,7 @@ Black, Stephanie (2002), Sentence Conjunctions in the Gospel of Matthew: ???, ??
 
 Denniston, J. D. (1954), The Greek Particles. Oxford. \\
 
-Frischer, Bernard (1991): Shifting paradigms: new approaches to Horace�s Ars poetica. American classical studies. Scholars Press, 1991. isbn: 9781555406196. url: http: //books.google.de/books?id=T1F0AAAAIAAJ. \\ 
+Frischer, Bernard (1991): Shifting paradigms: new approaches to HoraceÕs Ars poetica. American classical studies. Scholars Press, 1991. isbn: 9781555406196. url: http: //books.google.de/books?id=T1F0AAAAIAAJ. \\ 
 
 Thrall, Margaret Eleanor (1962) Greek Particles in the New Testament (Linguistic and Exegetical Studies 3). Leiden. \\
 
